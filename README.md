@@ -75,7 +75,7 @@ python app.py
 - Qubit 0: `H`
 
 #### Circuit Output:
-![Screenshot 2025-02-27 142000](https://github.com/user-attachments/assets/fce578f8-2bb2-40c4-9e8a-c8325e9ac8ae)
+![Screenshot 2025-02-27 150756](https://github.com/user-attachments/assets/f5c3297b-69d0-4ba7-b06a-97e83d732fa4)
 
 ### 2. Hadamard & CNOT (Qubit 0 → Qubit 1)
 #### Input:
@@ -93,6 +93,13 @@ python app.py
 
 #### Circuit Output:
 ![Screenshot 2025-02-27 141244](https://github.com/user-attachments/assets/dc29aa3a-8e17-4022-8b7c-5debec72ba09)
+
+### 4. Custome Example
+#### Input:
+- Five inputs with `CNOT`
+
+#### Circuit Output:
+![Screenshot 2025-02-27 150819](https://github.com/user-attachments/assets/2b7fffab-6b84-4df5-802b-9b23c055a0d1)
 
 ## File Structure
 ```
