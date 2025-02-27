@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Circuit Visualizer</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        form { margin: 20px; }
+        img { margin-top: 20px; max-width: 100%; }
+        select { margin: 5px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Quantum Circuit Visualizer</h1>
+
+    <form method="POST">
+    <label for="qbits">Number of Qubits:</label>
+    <input type="number" name="qbits" id="qbits" min="1" max="5" value="{{ qbits }}" onchange="this.form.submit()">
+    
+    <h3>Select Gates:</h3>
+    {% for i in range(qbits) %}
+        <label>Qubit {{ i }}:</label>
+        <select name="gate_{{ i }}">
+            <option value="H" {% if gate_choices[i] == "H" %} selected {% endif %}>Hadamard (H)</option>
+            <option value="X" {% if gate_choices[i] == "X" %} selected {% endif %}>Pauli-X (X)</option>
+            <option value="Y" {% if gate_choices[i] == "Y" %} selected {% endif %}>Pauli-Y (Y)</option>
+            <option value="Z" {% if gate_choices[i] == "Z" %} selected {% endif %}>Pauli-Z (Z)</option>
+        </select>
+    {% endfor %}
+
+    <br><br>
+    <label>Apply CNOT (Qubit 0 → Qubit 1 if available):</label>
+    <input type="checkbox" name="apply_cnot" value="on" {% if apply_cnot %} checked {% endif %}>
+    
+    <br><br>
+    <button type="submit">Generate Circuit</button>
+</form>
+
+
+    {% if img_data %}
+        <h2>Generated Quantum Circuit:</h2>
+        <img src="data:image/png;base64,{{ img_data }}" alt="Quantum Circuit">
+    {% endif %}
+</body>
+</html>
