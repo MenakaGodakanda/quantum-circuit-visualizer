@@ -63,30 +63,36 @@ pip install qiskit flask matplotlib pylatexenc
 ```
 python app.py
 ```
-Then open `http://127.0.0.1:5000/` in your browser.
+![Screenshot 2025-02-27 141458](https://github.com/user-attachments/assets/714202fe-9c62-4902-8d41-834ab53f896b)
+
+- Then open `http://127.0.0.1:5000/` in your browser.
+![Screenshot 2025-02-27 142506](https://github.com/user-attachments/assets/ac49acba-70f2-4dfa-82f6-e58294095fec)
 
 ## Example Quantum Circuits
 
 ### 1. Hadamard on Qubit 0
 #### Input:
-- Qubit 0: H
+- Qubit 0: `H`
 
 #### Circuit Output:
+![Screenshot 2025-02-27 142000](https://github.com/user-attachments/assets/fce578f8-2bb2-40c4-9e8a-c8325e9ac8ae)
 
 ### 2. Hadamard & CNOT (Qubit 0 → Qubit 1)
 #### Input:
-- Qubit 0: H
-- Qubit 1: CNOT
+- Qubit 0: `H`
+- Qubit 1: `CNOT`
 
 #### Circuit Output:
+![Screenshot 2025-02-27 141150](https://github.com/user-attachments/assets/71695c7b-f419-4fb1-8f8f-ccccb0d43955)
 
 ### 3. Pauli Gates
 #### Input:
-- Qubit 0: X
-- Qubit 1: Z
-- Qubit 2: Y
+- Qubit 0: `X`
+- Qubit 1: `Z`
+- Qubit 2: `Y`
 
 #### Circuit Output:
+![Screenshot 2025-02-27 141244](https://github.com/user-attachments/assets/dc29aa3a-8e17-4022-8b7c-5debec72ba09)
 
 ## File Structure
 ```
@@ -96,7 +102,6 @@ quantum-circuit-visualizer/
 │   ├── index.html
 │── app.py                  # Flask web server
 │── quantum_circuit.py       # Circuit generation logic
-│── requirements.txt         # Required Python libraries
 │── README.md                # Project documentation
 ```
 
